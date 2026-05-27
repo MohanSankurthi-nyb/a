@@ -6,25 +6,41 @@ function Profile() {
     let[status,setstatus]=useState("new")
     let[logIn,setLogin]=useState(false)
     let[exist,setExist]=useState(true)
+    let changeLogin=()=>{
+        setLogin(true)
+    }
   return (
     <div>
       <div>
       {/*<h1>Welcome user</h1>*/}
     </div>
-    {logIn?<h1>Profile</h1> : exist? <Login/> : <Signup/>}
-    <div>
+    { exist && <h1>Hai</h1>}
+    {logIn && <h1>Hello</h1>}
+   
+    {logIn?(<div>
+        <h1>Profile</h1>
+        
+        </div>) : exist? (<Login value={changeLogin}/>) : <Signup/>}
+        
+
+    {
+        logIn ? <button onClick={()=>setLogin(false)}>Logout</button>:
+        exist ? <div>
         <p>
             if you are a new user click
         </p>
         <button onClick={()=>setExist(false)}>Signup</button>
-    </div>
-
-    <div>
+    </div> :  <div>
         <p>
             if you are a existing user click the button
         </p>
-        <button onClick={()=>setExist(false)}>Login</button>
+        <button onClick={()=>setExist(true)}>Login</button>
     </div>
+
+    }
+    
+
+   
     
    {/* <div>
         <h1>login page</h1>
