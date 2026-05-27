@@ -21,7 +21,7 @@ function Profile() {
 
     <div>
         <p>
-            if you are a existing user click 
+            if you are a existing user click the button
         </p>
         <button onClick={()=>setExist(false)}>Login</button>
     </div>
