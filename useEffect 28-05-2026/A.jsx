@@ -20,7 +20,7 @@ function A() {
     console.log(a[1])
     //console.log(a[0].title)
   return (
-    <div key ={B.id}>A {/*{a}*/}
+    <div >A {/*{a}*/}
      {/*<h1>{a[1]?.title}</h1>
      <h3>{a[1]?.id}</h3>
     <h4> {a[1]?.userId}</h4>
@@ -29,7 +29,7 @@ function A() {
     {/*map*/}
     {a.map((b)=>{
       return(
-      <div>
+      <div key ={b.id}>
         <h1>{b.title}</h1>
        <h1>{b.id}</h1>
        <h1>{b.userId}</h1> 
