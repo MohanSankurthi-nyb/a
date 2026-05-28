@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Login from './Login'
 import Signup from './Signup'
 
 function Profile() {
+    useEffect(()=>{
+         console.log("Profile Page")
+    },[])
     let[status,setstatus]=useState("new")
     let[logIn,setLogin]=useState(false)
     let[exist,setExist]=useState(true)
@@ -29,7 +32,7 @@ function Profile() {
         <p>
             if you are a new user click
         </p>
-        <button onClick={()=>setExist(false)}>Signup</button>
+        <button onMouseEnter={()=>setExist(false)}>Signup</button>
     </div> :  <div>
         <p>
             if you are a existing user click the button
