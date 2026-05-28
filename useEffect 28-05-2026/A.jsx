@@ -20,7 +20,7 @@ function A() {
     console.log(a[1])
     //console.log(a[0].title)
   return (
-    <div>A {/*{a}*/}
+    <div key ={B.id}>A {/*{a}*/}
      {/*<h1>{a[1]?.title}</h1>
      <h3>{a[1]?.id}</h3>
     <h4> {a[1]?.userId}</h4>
