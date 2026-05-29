@@ -9,6 +9,7 @@ function A() {
     })
     let dispatch= useDispatch()
     console.log(d)
+
   return (
     <div>A
       <h1>{d}</h1>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import A from '../customHooks 29-05-2026/A'
 
 function Signup() {
   function hello(){
@@ -7,6 +8,7 @@ function Signup() {
           .then(()=>{})
           .then(()=>{})
   }
+  A()
   useEffect(()=>{
       console.log("Signup page")
     },[])
