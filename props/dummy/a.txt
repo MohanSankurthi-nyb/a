@@ -1,0 +1,26 @@
+A -> B , C
+B -> D
+C -> E , F
+D -> G , H
+E ->
+F ->
+G ->
+H -> I
+I ->
+                A
+            B       C
+        D      E        F
+    G      H
+              I 
+
+State lifting -> a pattern where you move the state from child components to their nearest common parent component used
+when multiple components need to share the same data and stay in sync
+
+state -> own data
+props -> parent data
+
+Prop drilling -> process of passing data through several layers of components to reach a deeply nested child component 
+that actually needs it
+
+local state -> within the component (useState)
+global state -> maintaining data in all states
