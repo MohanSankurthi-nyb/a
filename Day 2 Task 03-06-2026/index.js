@@ -20,7 +20,7 @@ console.log(typeof(name))
 console.log(typeof(bool))
 console.log(typeof(k))
 console.log(typeof(m))
-
+ 
 
 /*variables -> to store the data
 2 types of datatypes
