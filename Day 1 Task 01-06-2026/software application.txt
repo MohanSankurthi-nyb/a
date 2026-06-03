@@ -1,0 +1,73 @@
+A software application is a collection of programs   
+A s/w program is a collection of instructions
+An instruction is a block which is used to some task
+
+s/w life cycle
+->reqriements gathering
+->planning 
+->designing
+-> development
+->testing
+->build and deploy and store at an remote location
+->Url will be generated and name a domain
+->publish
+->support and maintenance
+
+                                          Web development
+                            Fronted                                       Backend
+                        Front End                           Back End                  Database
+
+                        HTML         |                       Python  |                    SQL
+                        CSS          | <--  API---->         Java    |<--Model     -->   MySql
+                        Javascript   |                       Node.js |                   Oracle      
+                        React        |                      .NET     |                  MongoDb
+                                                            Php       |                  .......
+                                                            Go        |
+                                                            Ruby       |
+
+
+
+Frontend ->
+HTML JS=>Browser Engine => Document Object Model =>Web page
+
+HTML page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    ---------
+</body>
+</html>
+
+
+
+
+HTML Doc Setup
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <p>first html page</p>
+</body>
+</html>
+
+Application Flow
+
+1.Browser reads <!DOCTYPE html>
+2.Loads <html>
+3.Processes <head>
+4.Processes <body>
+
+
+

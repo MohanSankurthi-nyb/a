@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYB Infotech</title>
+</head>
+<body>
+    <h1>Good Morning</h1>
+    <h2>Good Morning</h2>
+    <h3>Good Morning</h3>
+    <h4>Good Morning</h4>
+    <h5>Good Morning</h5>
+    <h6>Good Morning</h6>
+
+    <p>Good Morning</p>
+    <br>
+
+    <hr>
+    Good morning
+    <p><strong>Good</strong> Morning</p>
+
+    <!--Text formatting tags-->
+    <P> hello iam mohan sankurthi </strong> from <i>telangana</i></P>
+    Lorem  <strong>ipsum</strong> dolor <i>sit</i> amet, <u> consectetur</u> adipisicing elit. <del>Maiores</del>, rem. <br>
+
+    <!--hyperlinks -> clickable links-->
+<a href="https://www.amazon.in/s?k=join+amazon+prime&adgrpid=1327112148528381&hvadid=82944838805151&hvbmt=bb&hvdev=c&hvlocphy=266040&hvnetw=o&hvqmt=b&hvtargid=kwd-82945393014646%3Aloc-90&hydadcr=5626_2499487&mcid=3861a9d242543041b997efa1f39279d3&msclkid=f7ff2b60736c1ad15cd5417d62838597&tag=msndeskstdin-21&ref=pd_sl_9ntprzamt3_b" target="_blank">Click</a>
+ <img src="https://tse2.mm.bing.net/th/id/OIP.RAdrPNRMbet9JG-EzVBh1gAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" width="100px" height="100px">
+ <audio controls>
+    <source src="https://samplelib.com/mp3/sample-6s.mp3"> </source>
+ </audio>
+<video></video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/t0Q2otsqC4I?si=yOFVf8aumrgVo-bI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <br>
+   <hr>
+   <br>
+    <!--Table-->
+    <table border="1">
+        <caption>Family Details </caption>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>gender</th>
+             <th>salary</th>
+        </tr>
+        <tr>
+            <td>Mohan</td>
+            <td>25</td>
+            <td>Male</td>
+            <td>40K</td>
+        </tr>
+        <tr>
+            <td>Navya</td>
+            <td>23</td>
+            <td>Female</td>
+            <td rowspan="2">50K</td>
+        </tr>
+        <tr>
+            <td>Mona</td>
+            <td>02</td>
+            <td>Female</td>
+            <!--<td>10K</td>-->
+        </tr>
+        <tr>
+            <td colspan="2">Majority:</td>
+            <td>Female</td>
+            <td>90K</td>
+        </tr>
+
+
+    </table>
+    <br>
+    <hr>
+    <br>
+
+    <!--form-->
+    <h1>Sign in</h1>
+    <form>
+        <label>Full Name : </label>
+        <input type="text" name="fullname" required  placeholder="Enter your Name "minlength="3" maxlength="50"> <br> <br>
+        <label> Email : </label>
+        <input type="email" name="email" required placeholder="@gmail.com " ><br> <br>
+        <label> Password : </label>
+        <input type="password" name="password" required placeholder="Min 8 characters " minlength="3" maxlength="50"><br> <br>
+        <label > Mobile Number : </label>
+        <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="10 digit mobile number" required> <br> <br>
+
+        <label>Course : </label>
+        <Select name="course">
+            <option value=" ">Select Course</option>
+             <option value="B Tech ">B Tech</option>
+              <option value=" Pharmacy">Pharmacy</option>
+               <option value=" MBA">MBA</option>
+                <option value="Degree ">Degree </option>
+
+        </Select>
+        <br> <br>
+        <label>Gender : </label>
+        <input type="radio" name="gender" value="Male">
+        <label>Male</label>
+        <input type="radio" name="gender" value="Female">
+        <label>Femle</label>
+        <input type="radio" name="gender" value="Other">
+        <label>Other</label>
+        <br>
+        <br>
+
+        <label>Hobbies :</label>
+        <br>
+        <input type="checkbox" id="reading" name="hobbies" value="Reading">
+        <label >Reading </label>
+         <br> 
+        <input type="checkbox" id="sports" name="hobbies" value="sports">
+        <label > Sports </label> 
+          <br> 
+        <input type="checkbox" id="music" name="hobbies" value="music">
+        <label >Music </label> 
+         <br> 
+        <input type="checkbox" id="other" name="hobbies" value="other">
+        <label >Other  </label>
+        <br>
+        <br>
+        <input type="checkbox" required>
+        I agree to Terms and Conditions
+        <br>
+        <br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear"> 
+
+    </form>
+</body>
+</html>
