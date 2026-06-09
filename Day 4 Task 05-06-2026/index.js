@@ -263,15 +263,11 @@ grades(gradeA)
 var gradeB = 8
 grades(gradeB)
 
-//loops
-//1.for loop
-//2.while loop
-//3.do while
-//4.for of
-//5.for in
-//6.for each
 
-for(i=0;i<5;i++){
-    console.log(i)
-}
- 
+ console.log(true && false ||  true )
+
+ let name2="mohan"
+ if(name2){
+    console.log("truthy")
+ }
+
