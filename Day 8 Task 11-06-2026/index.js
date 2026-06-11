@@ -139,3 +139,120 @@ function calculatePrice(price){
 //only uses input values        uses or modifies external data
 //same input-> same output      same input may give different output
 // more preditable              less predictable
+
+ 
+(function (){
+    var message="hello";
+    console.log(message);
+})();
+ //console.log(message);
+
+ //this keyword -> refers to the object that is currently executing the function
+ //in global scope
+ console.log(this)
+ //in regular function
+ function show(){
+    console.log(this)
+ }
+ show()
+ //inside an object method
+ const person = {
+    name : "Mohan",
+    greet : function(){
+        console.log(this.name)
+    }
+ }
+ person.greet()
+ //inside an arrow function
+ const person1={
+    name1 : "navya",
+    greet1  : ()=>{
+        console.log(this.name1)// undefined
+    }
+ }
+ person1.greet1()
+
+ //object with a regular function
+ const student = {
+    name2 : "mona",
+    great:function(){
+        console.log("hello,my name is" + this.name2);
+    }
+ }
+ student.great()
+ 
+ //object with an arrow function
+ const student1={
+    name3 : "bunty",
+    great3 : ()=>{
+        console.log("hello,my name is "+ this.name3) //undefined
+    }
+ }
+ student1.great3()
+
+ //call() apply() bind() -> used to control the value of this keyword inside a function
+ //1.call()-> invokes a function immediately and allows you to pass arguments one by one
+ function introduce(city,country){
+    console.log(
+        "my name is "+ this.names +
+        ",I live in "+city +
+        "," + country
+    );
+ }
+ const per={
+    names: "Mohan"
+ };
+ introduce.call(per,"Jagtial","India");
+
+ //2.apply()-> arguments are passed as an array
+ function introduces(city,country){
+    console.log(
+        "my name is "+ this.names +
+        ",I live in "+city +
+        "," + country
+    );
+ }
+ const per1={
+    names:"Mohan"
+ };
+ introduces.apply(per1,["Jagtial","India"]);
+
+ //3.bind()-> doesnot execut the function immediately.Returns a new function with this permanently bound to speciufic object
+ function introduce1(city){
+    console.log(
+        "my name is "+ this.names +
+        ",I live in "+city 
+    );
+ }
+ const pers={
+    names: "Mohan"
+ };
+ const boundFunction=introduce1.bind(pers)
+ introduce.call(pers,"Jagtial","India");
+
+//Reference of this changes in different scenario
+ //in global scope -> in browsers,this refers to global object
+ console.log(this)
+ //in regular function-> in non-strict mode,this refers to global object,in strict mode this becomes undefined
+ "use strict";
+ function show1(){
+    console.log(this)
+ }
+ show1()
+//inside an object method-> greet() is called by person,therefore,this refers to person object
+ const person5 = {
+    name5 : "Mohan",
+    greet5 : function(){
+        console.log(this.name5)
+    }
+ }
+ person5.greet5()
+ // arrow function inside an object-> arrow function do not have their own this
+ const student10={
+    name10 : "bunty",
+    great10 : ()=>{
+        console.log("hello,my name is "+ this.name10) //undefined
+    }
+ }
+ student10.great10()
+
