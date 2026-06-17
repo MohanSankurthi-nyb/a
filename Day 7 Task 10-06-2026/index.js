@@ -190,4 +190,11 @@ console.log(factorial1(5))
 // -> 5 * 4 * 3 * 2 * 1
 // ->  120
  
+let numbers =5
+function printnumbers(){
+    for(i=1;i<=numbers;i++){
+        console.log(i)
+    }
+}
+printnumbers()
  
