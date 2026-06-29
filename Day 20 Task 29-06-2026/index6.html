@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive containers</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        div{
+            border: 2px solid black;
+            margin: 20px 0;
+            padding: 20px;
+            text-align: center;
+        }
+            /* Fixed dimensions using pixels */
+            .box1{
+                width: 300px;
+                height: 150px;
+                background-color: lightblue;
+            }
+            /* Percentage width  */
+            .box2{
+                width: 50%;
+                height: 120px;
+                background-color: lightgreen;
+            }
+            /* Viewport units */
+        .box3{
+            width: 60vw;
+            height: 30vh;
+            background-color: lightcoral;
+        }
+        /* Autosizing */
+        .box4{
+            width: auto;
+            height: auto;
+            background-color: yellow;
+        }
+        /* Responsive container */
+        .box5{
+            width: 80%;
+            max-width: 800px;
+            min-height: 200px;
+            background-color: lightpink;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        Fixed size box<br>
+        Width:300px<br>
+        Height:150px
+    </div>
+    <div class="box2">
+        Percentage Box<br>
+        Width: 50% of parent container<br>
+        Height:120px
+    </div>
+    <div class="box3">
+        Viewport Box<br>
+        Width:60vw<br>
+        Height:30vh
+    </div>
+    <div class="box4">
+        Auto Sized box<br>
+        Width and height adjust automatically based on content
+    </div>
+    <div class="box5">
+        Responsive Container<br>
+        Width:80% of screen width<br>
+        Max Width:800px<br>
+        Minimum Height:200px
+    </div>
+</body>
+</html>

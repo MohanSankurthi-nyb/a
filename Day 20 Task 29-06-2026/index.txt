@@ -1,0 +1,106 @@
+Cascading style sheets is used to control the appearance and layout of web pages.
+While HTML defines the structure and content of web pages,CSS makes it look attractive and user-friendly.
+Purpose of css
+1.add styles to web pages
+ - colors
+ -fonts
+ -backgrounds
+ -borders
+2.control page layout
+ -position elements of web page
+ -create responsive designs for different screen sizes
+3.improve user experience
+ -make website visually appealing and easier to use
+4.separate content from presentation
+ -HTML handles content
+ -css handles designs
+
+Advantages of CSS
+1.constistency across multiple pages
+ - one css file can style an entire website,ensuring all pages have the same lool and feel
+2.reduces code duplication
+ - without css,need to add styling attributes to every HTML elements
+3.easier maintenance
+ -changing a single CSS rule updates all matching elements across the website
+4.faster page loading
+ -external CSS files are cached by browser,reducing repeated downloads and improving performance
+5.supports animations
+ -css can create visual effects without javascript
+
+
+comparison and use cases
+1.inline css - 
+-Simple and quick for a single element.Has the highest priority among CSS file
+-mixes styling with HTML content.Difficult to maintain and reuse.leads to repetitive code
+-use case : testing styles quickly,email templates,or applying a unique style to one specific element
+
+2.internal css -
+-keeps styles separate from HTML elements.suitable for single-page websites.No need for an additional CSS file.
+-cannot be reused across multiple pages.Large style blocks can make the HTML file lengthy
+-use case : Small projects,prototypes,practice programs,and single page applications
+
+3.external css -
+-best separation of content and presentation.Reusable across multiple pages
+-reqrires an additional file and link tag.If the CSS file fails to load,the page appears unstyled
+-use case:  professional websites,large projects,and multi page application
+
+Selectors
+1.Universal selector(*):
+selects every element in the webpage
+
+2.Element selector(element name) 
+selects all occurrences of specific HTML element
+
+3.Class selector(.classname)
+selects all elements having a speific classname
+
+4.ID selector(#id name)
+selects one element with specific ID
+
+5.Group selector(,)
+applies the same styles to multiple Selectors
+
+6.Descendant selector(space)
+selects all matching elements inside another element,regardless of nesting level
+
+7.Child selector(>)
+selects only direct Child
+
+8.Adjacent sibling selector(+)
+selects the immediate next sibling element
+
+9.General sibling selector(~)
+Selects all siblings that come after a specified element
+
+Fixed layout vs Responsive layout
+Feature                 Fixed layout                           Responsive layout
+Width unit              uses px                                 uses %, vw, vh, rem, max-Width
+Screen Adaptation       same size on all screens                adjusts to screen size
+mobile friendly         Often causes horizontal scrolling       works well on mobiles and tablets
+flexibility             low                                      high
+user experience         poor on small screens                   better across all devices
+
+Fixed layout
+<div class="fixed-box">
+Fixed layout
+</div>
+
+.fixed-box{
+    width:800px;
+    height:300px;
+    background-color:lightblue;
+    border : 2px solid black;
+}
+
+Responsive layout
+<div class="responsive-box">
+Fixed layout
+</div>
+
+.responsive-box{
+    width:80%;
+    max-width: 800px;
+    min-height: 300px;
+    background-color:lightgreen;
+    border: 2px solid black;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Universal selector */
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Element selector */
+         h2{
+            color: blue;
+         }
+        /* Class selector */
+        .highlight{
+            background-color:yellow;
+        }
+        /* ID selector */
+        #main-title{
+            color: red;
+        }
+        /* Group selector */
+        h3,button{
+            color: green;
+        }
+        /* Descendant selector */
+        .container p{
+            color: purple;
+        }
+        /* Child Selector */
+        .parent>p{
+            border: 2px solid black;
+        }
+        /* Adjacent sibling selector */
+        h4 + p{
+            color: orange;
+        }
+        /* General sibling selector */
+        h5 ~ p{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <!-- ID selector -->
+    <h1 id="main-title">ID Selector Example</h1>
+    <!-- Element selector -->
+    <h2>Element selector Example</h2>
+    <!-- Class selector -->
+    <p class="highlight">This paragraph uses Class Selectors</p>
+    <!-- Group selector -->
+    <h3>Group Selector Heading</h3>
+    <button>Click Me</button>
+    <hr>
+    <!-- Descendant Selector -->
+     <div class="container">
+        <p>This paragraph is inside container div</p>
+        <section>
+            <p>This paragraph is also inside container div</p>
+        </section>
+     </div>
+     <p>This paragraph is outside container div</p>
+     <hr>
+     <!-- Child Selector -->
+      <div class="parent">
+        <p>Direct child paragraph</p>
+        <div>
+            <p>Nested paragraph(not direct child)</p>
+        </div>
+      </div>
+    <hr>
+    <!-- Adjacent Sibling Selector -->
+     <h4>Adjacent Sibling Selector</h4>
+     <p>This paragraph is immediately after h4</p>
+     <p>This paragraph is not selected</p>
+    <hr>
+    <!-- General sibling selector -->
+     <h5>General Sibling selector</h5>
+     <p>paragraph 1 after h5</p>
+     <div>Some div element</div>
+     <p>paragraph 2 after h5</p>
+    
+
+</body>
+</html>
