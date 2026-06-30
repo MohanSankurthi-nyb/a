@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Flexbox Example */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    background: lightblue;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.flex-item {
+    background: white;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+/* Grid Example */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.grid-item {
+    background: lightgreen;
+    padding: 20px;
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<h3>Flexbox (One-Dimensional Layout)</h3>
+<div class="flex-container">
+    <div class="flex-item">Home</div>
+    <div class="flex-item">About</div>
+    <div class="flex-item">Contact</div>
+</div>
+
+<h3>CSS Grid (Two-Dimensional Layout)</h3>
+<div class="grid-container">
+    <div class="grid-item">Sidebar</div>
+    <div class="grid-item">Main Content</div>
+</div>
+
+</body>
+</html>

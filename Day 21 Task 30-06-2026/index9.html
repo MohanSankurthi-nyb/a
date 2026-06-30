@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Float and Clear Example</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .left {
+            float: left;
+            width: 45%;
+            background: lightblue;
+            padding: 20px;
+        }
+
+        .right {
+            float: right;
+            width: 45%;
+            background: lightgreen;
+            padding: 20px;
+        }
+
+        .footer {
+            clear: both;
+            background: lightgray;
+            padding: 15px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        Left Column
+    </div>
+
+    <div class="right">
+        Right Column
+    </div>
+
+    <div class="footer">
+        Footer (cleared below both floated columns)
+    </div>
+</div>
+
+</body>
+</html>
