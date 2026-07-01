@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive webpage</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: steelblue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: lightgray;
+            padding: 15px;
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .container{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .sidebar{
+            flex: 1;
+            background: lightyellow;
+            padding: 20px;
+        }
+        .content{
+            flex: 3;
+            background: whitesmoke;
+            padding: 20px;
+        }
+        .crads{
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .card{
+            flex: 1 1 200px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid gray;
+            background: white;
+        }
+        footer{
+            background-color: steelblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        @media(max-width: 768px){
+            .container{
+                flex-direction: column;
+            }
+            nav{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Links and additional information</p>
+        </aside>
+        <main class="content">
+            <h2>Main Content</h2>
+            <p>This is the main content section</p>
+            <div class="cards">
+                <div class="card">Crad 1</div>
+                <div class="card">Crad 2</div>
+                <div class="card">Crad 3</div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>Copyright © 2026</p>
+    </footer>
+</body>
+</html>

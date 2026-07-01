@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Webpage Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            background-color: steelblue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .navbar{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #333;
+            padding: 15px;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+        }
+        .container{
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        .sidebar{
+            flex: 1;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .content{
+            flex: 3;
+            background: #fafafa;
+            padding: 20px;
+        }
+        .card{
+            flex:1;
+            min-width: 150px;
+            padding: 40px;
+            background: lightblue;
+            text-align: center;
+            border-radius: 10px;
+        }
+         footer{
+            background-color: steelblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        @media(max-width: 768px){
+            .container{
+                flex-direction: column;
+            }
+            navbar{
+                flex-direction: column;
+                align-items: center;
+            }
+            .cards{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>My website</h1>
+    </header>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li>Dashboard</li>
+                <li>Profile</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h2>Welcome</h2>
+            <p>
+                This is the main content of the webpage
+            </p>
+            <div class="cards">
+                <div class="card">HTML</div>
+                <div class="card">CSS</div>
+                <div class="card">Java</div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>© 2026 My Website.All rights reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Practice</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr;
+            grid-template-rows: 80px 150px 80px;
+            gap:10px;
+            justify-items: center;
+            align-items: center;
+            background-color: lightgray;
+            padding:10px;
+        }
+        .item{
+            background-color: skyblue;
+            border: 2px solid black;
+            padding:20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .header{
+            grid-column: 1/4;
+            background-color: orange;
+        }
+        .sidebar{
+            grid-row: 2/4;
+            background-color: lightgreen;
+        }
+        .footer{
+            grid-column: 2/4;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Grid Practice Example</h2>
+    <div class="grid-container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item">Content 1</div>
+        <div class="item">Content 2</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>
