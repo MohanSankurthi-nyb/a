@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+             font-family: Arial,sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: black;
+            padding: 20px;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+        }
+        .hero{
+            text-align: center;
+            padding: 40px;
+        }
+        .hero h1{
+            font-family: 40px;
+        }
+        .hero p{
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        img{
+           max-width:250px;
+        }
+        /* tablet */
+        @media(min-width:768px) and (max-width:1023px){
+            body{
+                font-size: 16px;;
+            }
+            .hero{
+                padding:30px;
+            }
+            .hero h1{
+                font-size: 32px;;
+            }
+            .hero p{
+                font-family: 18px;;
+            }
+            img{
+                max-width: 400px;
+            }
+        }
+        /* Laptops */
+        @media(min-width:1024px) and (max-width:1439px){
+            .body{
+                font-size: 18px;
+            }
+            .hero{
+                padding:50px;
+            }
+            img{
+                max-width: 500px;
+            }
+        }
+        /* Desktop screens */
+        @media(min-width:1440px){
+            body{
+                font-size: 20px;
+            }
+            .hero{
+                padding:70px;
+            }
+            .hero h1{
+                font-size: 50px;;
+            }
+            img{
+                max-width:700px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section class="hero">
+        <h1>Responsive Web Design</h1>
+        <p>
+            Typography,spacing,navigation,and images
+            automatically adjust for different screen sizes
+        </p>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Nature">
+    </section>
+</body>
+</html>
