@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element Selector */
+        p{
+            color: blue;
+        }
+        /* Class Selector */
+        .text{
+            color:green;
+        }
+        /* ID Selector */
+        #message{
+            color: red;
+        }
+        /* !important overrides all normal specificity rules */
+        .important-text{
+            color: purple !important;
+        }
+    </style>
+</head>
+<body>
+    <p id="message" class="text important-text">
+        CSS Specificity Example
+    </p>
+</body>
+</html>
+
+<!-- priority order
+ 
+!important
+Inline styles
+ID Selector
+Class Selector
+Element Selector
+Universal Selector -->

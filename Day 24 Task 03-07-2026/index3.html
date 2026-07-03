@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Website</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f2f2f2;
+        }
+
+        /* Header */
+        header{
+            background:#2c3e50;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        /* Navigation (Flexbox) */
+        nav{
+            display:flex;
+            justify-content:center;
+            background:#34495e;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:15px 20px;
+        }
+
+        nav a:hover{
+            background:orange;
+        }
+
+        /* Grid Layout */
+        .container{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
+            padding:20px;
+        }
+
+        /* Cards */
+        .card{
+            background:white;
+            padding:20px;
+            text-align:center;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.05);
+        }
+
+        button{
+            margin-top:10px;
+            padding:10px 20px;
+            background:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:red;
+        }
+
+        footer{
+            background:#2c3e50;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+
+        /* Laptop */
+        @media screen and (max-width:1200px){
+
+            .container{
+                grid-template-columns:repeat(3,1fr);
+            }
+        }
+
+        /* Tablet */
+        @media screen and (max-width:992px){
+
+            nav{
+                flex-wrap:wrap;
+            }
+
+            .container{
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+
+        /* Mobile */
+        @media screen and (max-width:768px){
+
+            nav{
+                flex-direction:column;
+                align-items:center;
+            }
+
+            nav a{
+                width:100%;
+                text-align:center;
+            }
+
+            .container{
+                grid-template-columns:1fr;
+            }
+
+            header{
+                font-size:22px;
+            }
+        }
+
+        /* Small Mobile */
+        @media screen and (max-width:480px){
+
+            header{
+                font-size:18px;
+            }
+
+            .card{
+                padding:15px;
+            }
+
+            button{
+                width:100%;
+            }
+
+            footer{
+                font-size:14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Responsive Web Design</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Courses</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="container">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>Build the structure of web pages.</p>
+        <button>Learn More</button>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>Design beautiful and responsive layouts.</p>
+        <button>Learn More</button>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>Add interactivity to websites.</p>
+        <button>Learn More</button>
+    </div>
+
+    <div class="card">
+        <h2>React</h2>
+        <p>Create modern user interfaces.</p>
+        <button>Learn More</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Responsive Website</p>
+</footer>
+
+</body>
+</html>

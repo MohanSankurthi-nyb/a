@@ -1,0 +1,388 @@
+1. Inline CSS
+<p style="color: blue;">Hello World</p>
+
+
+2. Internal CSS
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p{
+    color:red;
+}
+</style>
+</head>
+<body>
+<p>Hello CSS</p>
+</body>
+</html>
+
+
+3. External CSS
+HTML
+<link rel="stylesheet" href="style.css">
+<p>Hello CSS</p>
+style.css
+p{
+    color:green;
+}
+
+
+4. CSS Selectors
+Element Selector
+h1{
+    color:red;
+}
+
+ID Selector
+#title{
+    color:blue;
+}
+<h1 id="title">Welcome</h1>
+
+Class Selector
+.box{
+    background:yellow;
+}
+<div class="box">Content</div>
+
+Universal Selector
+*{
+    margin:0;
+    padding:0;
+}
+
+Group Selector
+h1,p{
+    color:purple;
+}
+
+5. Colors
+h1{
+    color:red;
+    background-color:yellow;
+}
+
+6. Background
+body{
+    background-color:lightblue;
+}
+
+Background Image
+body{
+    background-image:url("image.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+7. Border
+div{
+    border:2px solid black;
+}
+
+8. Margin
+div{
+    margin:30px;
+}
+
+9. Padding
+div{
+    padding:20px;
+}
+
+10. Height and Width
+div{
+    width:300px;
+    height:150px;
+}
+
+11. Box Model
+div{
+    width:200px;
+    padding:20px;
+    border:5px solid black;
+    margin:10px;
+}
+
+12. Text Properties
+p{
+    text-align:center;
+    text-transform:uppercase;
+    text-decoration:underline;
+}
+
+13. Font Properties
+p{
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+}
+
+14. Display Property
+span{
+    display:block;
+}
+
+15. Position Property
+Relative
+div{
+    position:relative;
+    left:30px;
+}
+
+Absolute
+div{
+    position:absolute;
+    top:50px;
+    left:100px;
+}
+
+Fixed
+div{
+    position:fixed;
+    bottom:0;
+}
+
+Sticky
+header{
+    position:sticky;
+    top:0;
+}
+
+16. Overflow
+div{
+    width:200px;
+    height:100px;
+    overflow:scroll;
+}
+
+17. Float
+img{
+    float:left;
+}
+
+18. Clear
+p{
+    clear:both;
+}
+
+19. Flexbox
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+<div class="container">
+    <div>A</div>
+    <div>B</div>
+</div>
+
+20. Grid
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+}
+
+21. Pseudo-Class
+button:hover{
+    background:red;
+}
+
+22. Pseudo-Element
+p::first-letter{
+    font-size:30px;
+}
+
+23. Opacity
+img{
+    opacity:0.5;
+}
+
+24. Visibility
+div{
+    visibility:hidden;
+}
+
+25. Z-index
+.box{
+    position:absolute;
+    z-index:10;
+}
+
+26. Cursor
+button{
+    cursor:pointer;
+}
+
+27. List Style
+ul{
+    list-style-type:square;
+}
+
+28. Table Styling
+table{
+    border-collapse:collapse;
+}
+
+td,th{
+    border:1px solid black;
+    padding:10px;
+}
+
+29. Transform
+div{
+    transform:rotate(45deg);
+}
+
+30. Transition
+button{
+    background:blue;
+    transition:0.5s;
+}
+
+button:hover{
+    background:red;
+}
+
+31. Animation
+@keyframes move{
+    from{
+        left:0;
+    }
+    to{
+        left:200px;
+    }
+}
+
+div{
+    position:relative;
+    animation:move 3s infinite;
+}
+
+32. Media Query
+@media (max-width:600px){
+    body{
+        background:lightgreen;
+    }
+}
+
+33. CSS Variables
+:root{
+    --main-color:blue;
+}
+
+h1{
+    color:var(--main-color);
+}
+
+34. Shadow
+Box Shadow
+div{
+    box-shadow:5px 5px 10px gray;
+}
+Text Shadow
+h1{
+    text-shadow:2px 2px red;
+}
+
+35. Gradient
+div{
+    background:linear-gradient(red, yellow);
+}
+
+36. Object Fit
+img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+}
+
+37. Filter
+img{
+    filter:grayscale(100%);
+}
+
+38. Resize
+textarea{
+    resize:both;
+}
+
+39. Clip Path
+div{
+    clip-path:circle();
+}
+
+40. CSS Units
+.box{
+    width:50%;
+    height:20vh;
+    font-size:2rem;
+    margin:10px;
+}
+
+41. Attribute Selector
+input[type="text"]{
+    border:2px solid blue;
+}
+
+42. Combinators
+Descendant
+div p{
+    color:red;
+}
+
+Child
+div > p{
+    color:blue;
+}
+
+Adjacent Sibling
+h1 + p{
+    color:green;
+}
+
+General Sibling
+h1 ~ p{
+    color:orange;
+}
+
+43. Import CSS
+@import url("style.css");
+
+44. Min/Max Width
+div{
+    min-width:200px;
+    max-width:500px;
+}
+
+45. Min/Max Height
+div{
+    min-height:100px;
+    max-height:300px;
+}
+
+46. Aspect Ratio
+.box{
+    aspect-ratio:16/9;
+}
+
+47. Column Layout
+p{
+    column-count:2;
+}
+
+48. Scroll Behavior
+html{
+    scroll-behavior:smooth;
+}
+
+49. User Select
+p{
+    user-select:none;
+}
+
+50. Pointer Events
+button{
+    pointer-events:none;
+}

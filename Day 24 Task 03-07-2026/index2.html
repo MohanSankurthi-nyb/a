@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Flexbox and Grid Layout</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+        }
+
+        /* Header */
+        header{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        /* Flexbox Navigation */
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            background:#444;
+            padding:15px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:10px 15px;
+        }
+
+        nav a:hover{
+            background:orange;
+            border-radius:5px;
+        }
+
+        /* Grid Layout */
+        .container{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+            padding:20px;
+        }
+
+        /* Cards */
+        .card{
+            background:white;
+            padding:20px;
+            text-align:center;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.05);
+        }
+
+        .card button{
+            margin-top:10px;
+            padding:10px 20px;
+            background:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .card button:hover{
+            background:red;
+        }
+
+        /* Footer */
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+
+        /* Tablet */
+        @media(max-width:768px){
+
+            nav{
+                flex-direction:column;
+                align-items:center;
+            }
+
+            .container{
+                grid-template-columns:repeat(2,1fr);
+            }
+        }
+
+        /* Mobile */
+        @media(max-width:480px){
+
+            .container{
+                grid-template-columns:1fr;
+            }
+
+            header{
+                font-size:20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Responsive Flexbox & Grid Example</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="container">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>Structure of web pages.</p>
+        <button>Learn</button>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>Styles and layouts.</p>
+        <button>Learn</button>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>Adds interactivity.</p>
+        <button>Learn</button>
+    </div>
+
+    <div class="card">
+        <h2>Bootstrap</h2>
+        <p>Responsive framework.</p>
+        <button>Learn</button>
+    </div>
+
+    <div class="card">
+        <h2>React</h2>
+        <p>Build modern user interfaces.</p>
+        <button>Learn</button>
+    </div>
+
+    <div class="card">
+        <h2>Node.js</h2>
+        <p>JavaScript runtime for servers.</p>
+        <button>Learn</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Responsive Web Design</p>
+</footer>
+
+</body>
+</html>

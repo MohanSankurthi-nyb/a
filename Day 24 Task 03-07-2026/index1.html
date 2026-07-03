@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Practice Page</title>
+
+    <style>
+        /* Universal Selector */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        /* Body */
+        body{
+            font-family:Arial, sans-serif;
+            background:linear-gradient(to right,#74ebd5,#9face6);
+        }
+
+        /* Header */
+        header{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:20px;
+            position:sticky;
+            top:0;
+        }
+
+        /* Navigation */
+        nav{
+            display:flex;
+            justify-content:center;
+            background:#444;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            padding:15px 20px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            background:yellow;
+        }
+
+        /* Grid Layout */
+        .container{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+            padding:30px;
+        }
+
+        /* Card */
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 4px 8px gray;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        /* Headings */
+        .card h2{
+            color:blue;
+            margin-bottom:10px;
+        }
+
+        /* Paragraph */
+        .card p{
+            margin-bottom:15px;
+        }
+
+        /* Button */
+        button{
+            background:blue;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:red;
+        }
+
+        /* Footer */
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+
+        /* Media Query */
+        @media(max-width:768px){
+            .container{
+                grid-template-columns:1fr;
+            }
+
+            nav{
+                flex-direction:column;
+                align-items:center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>My CSS Practice Page</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="container">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>HTML is used to create the structure of a webpage.</p>
+        <button>Read More</button>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>CSS is used to style webpages with colors, layouts, and effects.</p>
+        <button>Read More</button>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>JavaScript adds interactivity and dynamic behavior to webpages.</p>
+        <button>Read More</button>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 CSS Practice</p>
+</footer>
+
+</body>
+</html>
