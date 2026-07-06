@@ -1,0 +1,193 @@
+React is an open-source JS library developed by Meta for building user interfaces(UI),especially for web applications.
+helps developers create interactive and dynamic websites by breaking the UI into small,reusable peices called components
+
+React is used because it makes web development faster,easier and more organized
+1.reusable components 
+2.faster performance
+3.easy to maintain
+4.interactive UIs
+5.single page applications 
+
+Advantages of React over Traditional JS applications
+1.component based architecture: 
+-react divides the UI into reusable components
+-traditional js often reqruires writing and managing large amounts of code manually
+2.virtual DOM for better performance
+-react uses a virtual DOM to update onlt the changed parts of a webpage
+-traditonal js directly manipulates the DOM,which can be slower for complex applications
+3.reusable code
+-components can be reused across different parts of applications
+-this reduces code duplications and development time
+4.easier maintenence
+-code is organized intp small,independent components
+-bugs are easier to find anf fix
+
+
+Virtual DOM
+it is a ightweight, in memory copy of the Real DOM(the actual webpage displayed in the browser)
+instead of updating the Real DOM directly whenever the data chanes,React first updates the Virtual DOM
+
+How React updates the UI
+1.a user performs an action(eg.clicks a button)
+2.the components state or props changed
+3.react creates a new Virtual DOM that reflects the updated UI
+4.react compares the new Virtul DOM with the previous Virtual DOM.This process is called diffing
+5.react identifies only the elements that have changed
+6.react updates only those changed parts in the Real DOM
+7.browser displays the output UI
+
+Single Page Application (SPA)
+In React, a Single Page Application (SPA) is a web application where the browser loads a single HTML page (index.html) once.
+ React then updates the UI dynamically as users navigate, without reloading the entire page.
+
+How a React SPA works
+The browser requests the application.
+The server returns index.html.
+React loads the JavaScript bundle.
+React renders components into the page.
+Navigation between pages is handled by a client-side router.
+Data is fetched from backend APIs as needed.
+
+A React project's folder structure helps organize code so it is easier to develop, maintain, and scale.
+ While the exact structure varies by project, most React applications follow a similar pattern.
+Basic React Project Structure
+my-react-app/
+│
+├── node_modules/
+├── public/
+├── src/
+├── package.json
+├── package-lock.json
+├── vite.config.js (Vite) / webpack.config.js (Webpack)
+├── .gitignore
+└── README.md
+
+
+project files and purpose of each folder.
+
+| Folder/File      | Purpose                                                                                                    |
+| ---------------- | ---------------------------------------------------------------------------------------------------------- |
+| `public/`        | Static files served directly, such as `index.html`, images, and icons.                                     |
+| `src/`           | Contains the application's source code.                                                                    |
+| `assets/`        | Images, fonts, icons, and other static assets imported into components.                                    |
+| `components/`    | Reusable UI components like buttons, cards, and navigation bars.                                           |
+| `pages/`         | Components representing complete pages (Home, About, Login, etc.).                                         |
+| `hooks/`         | Custom React hooks that encapsulate reusable logic.                                                        |
+| `services/`      | API calls and communication with backend services.                                                         |
+| `context/`       | React Context providers for shared state such as authentication or themes.                                 |
+| `utils/`         | Helper functions, constants, and utility methods.                                                          |
+| `styles/`        | Global styles, CSS modules, or theme-related stylesheets.                                                  |
+| `App.jsx`        | The root application component that typically defines the layout and routes.                               |
+| `main.jsx`       | The application's entry point, where React renders the app into the DOM.                                   |
+| `package.json`   | Project metadata, dependencies, and npm scripts.                                                           |
+| `vite.config.js` | Configuration for the Vite development server and build process (or `webpack.config.js` if using Webpack). |
+| `README.md`      | Project documentation, setup instructions, and usage information.                                          |
+
+
+1. React DOM
+
+React DOM is the library that connects React to the browser's Document Object Model (DOM). While React creates and manages components, React DOM is responsible for rendering those components into the web page.
+
+Purpose
+Renders React components into HTML.
+Updates only the parts of the page that change (Virtual DOM).
+Makes React applications interactive.
+
+2. React Router
+
+React Router enables navigation between different pages in a Single Page Application (SPA) without reloading the browser.
+
+Purpose
+Client-side routing.
+Maps URLs to React components.
+Supports browser history (Back/Forward buttons).
+Allows route parameters and nested routes.
+
+3. Axios
+
+Axios is a JavaScript library used to make HTTP requests to backend APIs.
+
+Purpose
+Send GET, POST, PUT, and DELETE requests.
+Receive data from a server.
+Send data to a server.
+Handle request and response errors.
+
+4. Redux (Introduction)
+
+Redux is a library for managing application-wide (global) state.
+
+Imagine an e-commerce website:
+
+Shopping cart
+Logged-in user
+Theme (Dark/Light)
+Notifications
+
+Many components need access to the same data. Instead of passing data through multiple levels
+ of components (called "prop drilling"), Redux stores it in one central location.
+
+Purpose
+Store global state.
+Share data across components.
+Make state updates predictable.
+Simplify complex applications.
+Redux Concepts
+
+5. React Hooks (Introduction)
+
+Hooks are special functions that let you use React features such as state and lifecycle behavior in functional components.
+
+useState
+
+Stores component state.
+
+useEffect
+
+Runs side effects, such as fetching data or setting up timers.
+
+useContext
+
+Shares data without passing props through every level.
+
+useRef
+
+Accesses DOM elements or stores mutable values that don't trigger re-renders.
+
+useMemo
+
+Memoizes expensive calculations to avoid unnecessary recomputation.
+
+useCallback
+
+Memoizes function definitions to help optimize rendering.
+
+Common Hooks
+Hook	        Purpose
+useState	    Store local state
+useEffect	    Perform side effects
+useContext	    Share data
+useRef	        Access DOM or persist values
+useMemo	        Cache computed values
+useCallback 	Cache functions
+
+6. React Developer Tools
+
+React Developer Tools is a browser extension that helps you inspect and debug React applications.
+
+Purpose
+View the component hierarchy.
+Inspect component props and state.
+Track component re-renders.
+Profile application performance.
+
+Features
+Components tab
+View the component tree.
+Edit props and state.
+Inspect hooks.
+Profiler tab
+Measure rendering performance.
+Identify unnecessary re-renders.
+Optimize slow components.
+Example
