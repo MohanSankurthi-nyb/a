@@ -1,0 +1,45 @@
+| Feature              | Functional Components             | Class Components                                   |
+| -------------------- | --------------------------------- | -------------------------------------------------- |
+| Syntax               | Simple JavaScript function        | ES6 class extending `React.Component`              |
+| State Management     | Uses Hooks (`useState`)           | Uses `this.state`                                  |
+| Lifecycle Methods    | Uses Hooks (`useEffect`)          | Uses lifecycle methods (`componentDidMount`, etc.) |
+| `this` Keyword       | Not used                          | Required                                           |
+| Code Size            | Shorter and cleaner               | More verbose                                       |
+| Performance          | Generally optimized and preferred | Slightly more overhead                             |
+| React Recommendation | Recommended for new development   | Mostly legacy code                                 |
+
+
+React Strict Mode
+React Strict Mode is a development only feature that helps identify bugs,warns about deprecated APIs,detects unsafe code
+and encourages React best practices.
+It does not render any UI and has no effect in production.
+
+
+JSX Expressions:
+It is any valid JS expression written inside curly braces{} .
+React evaluates and displays the output.
+
+
+Props in React
+properties(props) are used to pass data from a parent component to a child Component
+it makes components dynamic and reusable,bcoz the same components can display different data
+Uses:
+pass data from parent to child components
+make components Reusable
+display dynamic data
+
+Hooks in react
+Are special features that let use features like state and lifecycle in functional components
+introduced in React 16.8
+uses:
+manage component state
+handle side effects(API calls,event listeners)
+improve code reusability
+reduce the need for class components
+
+common react hooks
+1.useState:
+used to store and update state
+2,useEffect:
+used for side effects(operations that happen outside the rendering the UI.Interact with outside world or perform tasks 
+other than returning JSX ) such as API calls,timers,and updating the document title.
