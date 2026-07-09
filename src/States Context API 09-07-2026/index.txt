@@ -1,0 +1,42 @@
+Lifting State
+It is React Pattern where state is moved from a child component to the nearest common parent so that multiple components 
+can share and manage the same data conistently
+
+Props Drlling
+Process of passing data(props) from a parent component to a deeply nested child component through intermediate components
+that dont actually need the data
+
+Props drilling problem is solved by using Context API
+Context API:it is an built-in React feature that allows to share data across multiple components without passing props 
+manually through every level.
+
+Local state is data that belongs to a single React component. It is managed inside that component and controls its behavior 
+and appearance. Other components cannot access or modify it unless it is explicitly passed through props.
+
+Event-based state updates occur when a React component updates its state in response to a user action or 
+browser event, such as clicking a button, typing in an input field, submitting a form, or hovering over an element.
+
+React uses event handlers (like onClick, onChange, and onSubmit) together with the useState Hook to update
+the component's state.
+
+Global state is data that is shared across multiple components in a React application.
+Unlike local state, which belongs to a single component, global state can be accessed and
+updated by different components without passing data through many levels of props.
+
+Global state is useful when multiple components need access to the same information.
+
+In React, choosing between local state and global state depends on where the data is needed.
+1.Use local state when the data is needed by only one component such as form inputs, counters, and toggle buttons.
+2.Use global state when the same data must be shared by multiple components such as user authentication, shopping carts,
+themes, or language settings.
+
+Comparison: Local State vs Global State
+Feature	        Local State	                Global State
+Scope	        One component	            Multiple components
+Managed by	    useState	                Context API, Redux, Zustand, etc.
+Access	        Only within the component	Shared across components
+Best for	    UI-specific data	        Application-wide data
+Example	        Form input,toggle,counter	User login,cart,theme
+
+Destructuring in React is simply a JavaScript technique used to extract values from props, state, arrays,
+ or objects in a concise way.
