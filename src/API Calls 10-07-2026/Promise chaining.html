@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise Chaining Example</title>
+</head>
+
+<body>
+
+<h2>Promise Chaining</h2>
+
+<button onclick="getData()">Get User Data</button>
+
+<pre id="output"></pre>
+
+<script>
+
+function getData() {
+
+    fetch("https://jsonplaceholder.typicode.com/users/1")
+
+    // Step 1: Convert response to JSON
+    .then(response => {
+        return response.json();
+    })
+
+    // Step 2: Get user data
+    .then(user => {
+        document.getElementById("output").textContent =
+            "User Name: " + user.name;
+
+        // Return another API call
+        return fetch(
+            "https://jsonplaceholder.typicode.com/posts?userId=" + user.id
+        );
+    })
+
+    // Step 3: Convert posts response to JSON
+    .then(response => {
+        return response.json();
+    })
+
+    // Step 4: Display posts
+    .then(posts => {
+        document.getElementById("output").textContent +=
+            "\n\nNumber of Posts: " + posts.length;
+    })
+
+    // Error handling
+    .catch(error => {
+        document.getElementById("output").textContent =
+            "Error: " + error.message;
+    });
+
+}
+
+</script>
+
+</body>
+</html>

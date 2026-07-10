@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Axios HTTP Methods Example</title>
+</head>
+
+<body>
+
+  <h1>Axios API Example</h1>
+
+  <button onclick="getData()">GET</button>
+  <button onclick="postData()">POST</button>
+  <button onclick="putData()">PUT</button>
+  <button onclick="patchData()">PATCH</button>
+  <button onclick="deleteData()">DELETE</button>
+
+  <pre id="result"></pre>
+
+  <!-- Axios CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+
+    const API_URL = "https://jsonplaceholder.typicode.com/posts";
+
+    const output = document.getElementById("result");
+
+
+    // GET - Read data
+    async function getData() {
+      try {
+        const response = await axios.get(API_URL);
+
+        output.innerHTML = JSON.stringify(response.data, null, 2);
+      }
+      catch(error) {
+        console.log(error);
+      }
+    }
+
+
+    // POST - Create data
+    async function postData() {
+      try {
+        const response = await axios.post(API_URL, {
+          title: "My Post",
+          body: "Created using Axios",
+          userId: 1
+        });
+
+        output.innerHTML = JSON.stringify(response.data, null, 2);
+      }
+      catch(error) {
+        console.log(error);
+      }
+    }
+
+
+    // PUT - Update complete data
+    async function putData() {
+      try {
+        const response = await axios.put(`${API_URL}/1`, {
+          id: 1,
+          title: "Updated Title",
+          body: "Updated complete data",
+          userId: 1
+        });
+
+        output.innerHTML = JSON.stringify(response.data, null, 2);
+      }
+      catch(error) {
+        console.log(error);
+      }
+    }
+
+
+    // PATCH - Update partial data
+    async function patchData() {
+      try {
+        const response = await axios.patch(`${API_URL}/1`, {
+          title: "Only title updated"
+        });
+
+        output.innerHTML = JSON.stringify(response.data, null, 2);
+      }
+      catch(error) {
+        console.log(error);
+      }
+    }
+
+
+    // DELETE - Remove data
+    async function deleteData() {
+      try {
+        const response = await axios.delete(`${API_URL}/1`);
+
+        output.innerHTML = "Deleted successfully";
+      }
+      catch(error) {
+        console.log(error);
+      }
+    }
+
+  </script>
+
+</body>
+</html>

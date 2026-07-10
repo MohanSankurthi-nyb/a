@@ -1,0 +1,92 @@
+Redux is JS library  for managing application state.
+Its commonly used with React applications when many components need to share and update the same data
+->All shared data is stored in one central store,and any component can access or update it.
+
+1.Store -> its a central place where applications global state is kept.
+Uses:
+-share data across components
+-avoid prop drilling
+-keep data synchronozed
+
+createStore -> used to manage global state management
+but it has updated version called configureStore
+
+React vs Redux
+-> React useState -> State belongs to single component
+-> Redux Store    -> State is shared across the entire application
+
+2.Action -> An action is a message that tells Redux what happened or what should happen.
+Example:
+"Increase the counter."
+"Add this item to the cart."
+"User logged in
+
+3. Reducer
+A reducer is a function that decides how the state should change after receiving an action.
+
+useSelector is a React Redux hook used to read data from the Redux store.
+
+useDispatch is a React Redux hook used to send actions to the Redux store.
+
+
+in Redux:
+useSelector = Read data
+useDispatch = Update data
+
+An API call is a request sent from one application to another application (or server) to get, send, update, or delete data.
+
+API stands for Application Programming Interface.
+
+async function:
+An async function in JavaScript allows you to write asynchronous code that looks like normal synchronous code.
+It is commonly used when working with APIs, databases, or any operation that takes time.
+
+Asynchronous code is code that allows a program to start a task that takes time (such as fetching data from an API, 
+reading a file, or waiting for a timer) without stopping the rest of the program from running.
+
+The await keyword is used to wait for an asynchronous operation (a Promise) to complete before continuing with the next line of code.
+It can only be used inside an async function.
+It makes asynchronous code easier to read and write.
+
+JSON.stringify() is a built-in JavaScript method that converts a JavaScript object (or value) into a JSON string.
+It is mainly used when sending data to a server through an API request because HTTP requests usually send data as text.
+
+GET → Retrieve data
+POST → Create new data
+PUT → Replace existing data
+PATCH → Update partial data
+DELETE → Remove data
+
+Axios is a JavaScript library used to make HTTP requests from a web application or Node.js application to a server or API.
+It is used to:
+Get data from a server (GET)
+Send data to a server (POST)
+Update data (PUT/PATCH)
+Delete data (DELETE)
+
+Axios works with Promises and supports async/await, making API communication easier.
+
+Promise chaining is a technique where multiple asynchronous operations are executed one after another by 
+connecting multiple .then() methods.
+Each .then() receives the result from the previous step and returns a new Promise.
+
+What is a Promise in JavaScript?
+
+A Promise is a JavaScript object that represents the result of an asynchronous operation.
+It tells us that a task will either complete successfully or fail in the future.
+
+For example:
+Fetching data from an API
+Reading a file
+Waiting for a timer
+Database operations
+
+->Instead of waiting and blocking the program, JavaScript creates a Promise and continues running other code.
+
+innerHTML is used to get or change the HTML content inside an HTML element using JavaScript.
+It allows you to dynamically update a webpage without refreshing it.
+Syntax
+element.innerHTML = "new content";
+
+The slice() method is used to extract a portion of an array or string without changing the original data.
+It creates a new array or string containing selected elements.

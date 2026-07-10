@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PUT PATCH DELETE Operations</title>
+</head>
+
+<body>
+    <h2>REST API Operations</h2>
+    <button onclick="putRequest()">PUT Request</button>
+    <button onclick="patchRequest()">PATCH Request</button>
+    <button onclick="deleteRequest()">DELETE Request</button>
+
+    <h3>API Response:</h3>
+    <div id="result"></div>
+
+    <script>
+        const apiURL = "https://jsonplaceholder.typicode.com/posts/1";
+        const result = document.getElementById("result");
+        // PUT Request - Update complete data
+        async function putRequest() {
+            try {
+                let response = await fetch(apiURL, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        id: 1,
+                        title: "Updated Post",
+                        body: "This post is updated using PUT",
+                        userId: 1
+                    })
+                });
+                let data = await response.json();
+                result.innerHTML =
+                    "<h3>PUT Response</h3>" +
+                    JSON.stringify(data);
+            } catch (error) {
+                result.innerHTML = "Error: " + error.message;
+            }
+        }
+
+
+        // PATCH Request - Update partial data
+        async function patchRequest() {
+            try {
+                let response = await fetch(apiURL, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        title: "Patched Title"
+                    })
+                });
+                let data = await response.json();
+                result.innerHTML =
+                    "<h3>PATCH Response</h3>" +
+                    JSON.stringify(data);
+            } catch (error) {
+                result.innerHTML = "Error: " + error.message;
+            }
+        }
+
+
+        // DELETE Request - Remove data
+        async function deleteRequest() {
+            try {
+                let response = await fetch(apiURL, {
+                    method: "DELETE"
+                });
+
+                if (response.ok) {
+                    result.innerHTML =
+                        "<h3>DELETE Response</h3>Post deleted successfully";
+                } else {
+                    result.innerHTML = "Delete failed";
+                }
+
+            } catch (error) {
+                result.innerHTML = "Error: " + error.message;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTTP Methods Example</title>
+</head>
+
+<body>
+
+<h2>API Requests Using HTTP Methods</h2>
+
+<button onclick="getData()">GET</button>
+<button onclick="postData()">POST</button>
+<button onclick="putData()">PUT</button>
+<button onclick="patchData()">PATCH</button>
+<button onclick="deleteData()">DELETE</button>
+
+<h3>Response:</h3>
+<pre id="output"></pre>
+
+
+<script>
+
+const apiURL = "https://jsonplaceholder.typicode.com/posts";
+const output = document.getElementById("output");
+
+
+// GET Request - Fetch data
+async function getData() {
+    try {
+        const response = await fetch(apiURL);
+
+        const data = await response.json();
+
+        output.textContent = 
+            "GET Response:\n" + JSON.stringify(data.slice(0, 3), null, 2);
+
+    } catch(error) {
+        output.textContent = error.message;
+    }
+}
+
+
+// POST Request - Create data
+async function postData() {
+    try {
+        const response = await fetch(apiURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: "New Post",
+                body: "Created using POST",
+                userId: 1
+            })
+        });
+
+        const data = await response.json();
+
+        output.textContent =
+            "POST Response:\n" + JSON.stringify(data, null, 2);
+
+    } catch(error) {
+        output.textContent = error.message;
+    }
+}
+
+
+// PUT Request - Replace complete data
+async function putData() {
+    try {
+        const response = await fetch(apiURL + "/1", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: 1,
+                title: "Updated Post",
+                body: "Updated using PUT",
+                userId: 1
+            })
+        });
+
+        const data = await response.json();
+
+        output.textContent =
+            "PUT Response:\n" + JSON.stringify(data, null, 2);
+
+    } catch(error) {
+        output.textContent = error.message;
+    }
+}
+
+
+// PATCH Request - Update partial data
+async function patchData() {
+    try {
+        const response = await fetch(apiURL + "/1", {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: "Changed Title"
+            })
+        });
+
+        const data = await response.json();
+
+        output.textContent =
+            "PATCH Response:\n" + JSON.stringify(data, null, 2);
+
+    } catch(error) {
+        output.textContent = error.message;
+    }
+}
+
+
+// DELETE Request - Remove data
+async function deleteData() {
+    try {
+        const response = await fetch(apiURL + "/1", {
+            method: "DELETE"
+        });
+
+        if(response.ok) {
+            output.textContent = "DELETE Response:\nData deleted successfully";
+        }
+        else {
+            output.textContent = "Delete failed";
+        }
+
+    } catch(error) {
+        output.textContent = error.message;
+    }
+}
+
+</script>
+
+</body>
+</html>
