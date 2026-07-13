@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { A } from "./a";
+import { A } from "./A";
 
 function B() {
   const { count, setCount } = useContext(A);
