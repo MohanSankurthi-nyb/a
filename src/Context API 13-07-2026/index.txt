@@ -1,0 +1,47 @@
+Global state management in React is used to share and manage data that multiple components need to access or update. 
+Instead of passing data through many levels of components using props (known as prop drilling), global state provides
+ a centralized place for storing and updating shared data.
+
+Why Global State Management is Needed
+1.Avoids Prop Drilling
+In large applications, passing props through multiple intermediate components becomes difficult to maintain.
+Global state allows any component to access the required data directly.
+2.Centralized Data Management
+Keeps shared application data in one place.
+Makes it easier to track and update the state consistently.
+3.Improves Code Maintainability
+Reduces duplicate state across components.
+Makes the application easier to understand and debug.
+4.Efficient State Sharing
+Components that need the same data (e.g., user information, theme settings, shopping cart) can access it without 
+unnecessary complexity.
+5.Predictable State Updates
+State management libraries often provide structured ways to update data, making application behavior more predictable.
+
+Common Use Cases
+User authentication (logged-in user information)
+Shopping cart in an e-commerce application
+Theme (light/dark mode)
+Language preferences
+Notifications
+Application-wide settings
+
+Limitations of Props Drilling
+Props drilling is the practice of passing data from a parent component to deeply nested child components 
+through several intermediate components, even if those components do not need the data themselves.
+
+1. Makes Code More Complex
+Every intermediate component must receive and pass the props.
+This increases the amount of code and makes it harder to read.
+2. Difficult to Maintain
+A change in the data or prop name may require updates across multiple components.
+This becomes cumbersome as the application grows.
+3. Reduces Component Reusability
+Intermediate components become dependent on props they don't actually use.
+This makes them less reusable in other parts of the application.
+4. Harder to Debug
+It can be difficult to trace where a prop originated or why its value changed.
+Debugging becomes more time-consuming in deep component trees.
+5. Unnecessary Re-renders
+When a prop changes, intermediate components may re-render even though they don't use that prop.
+This can negatively impact performance in large applications.
