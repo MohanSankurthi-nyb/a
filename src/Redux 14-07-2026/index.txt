@@ -1,0 +1,99 @@
+Redux is an open-source state management library used primarily with React (but it can also be used with other JavaScript
+ frameworks). It helps manage and share application data (state) in a centralized and predictable way.
+
+Redux stores the application's state in a single store and updates it through actions and reducers.
+
+Why Redux is Used
+Redux is useful when:
+Many components need access to the same data.
+You want to avoid passing data through multiple components (prop drilling).
+The application has complex state management.
+You need predictable state updates and easier debugging.
+
+
+Core Concepts of Redux
+Store
+A central object that holds the application's state.
+There is typically one store for the entire application.
+Action
+A plain JavaScript object that describes what happened.
+
+Example:
+
+{
+  type: "ADD_TODO",
+  payload: "Learn Redux"
+}
+Reducer
+A function that takes the current state and an action, then returns a new state.
+
+Example:
+
+function todoReducer(state = [], action) {
+  switch (action.type) {
+    case "ADD_TODO":
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+}
+Dispatch
+Sends an action to the Redux store.
+
+Example:
+
+store.dispatch({
+  type: "ADD_TODO",
+  payload: "Learn Redux"
+});
+
+Redux Data Flow
+User Action
+     ↓
+Dispatch(Action)
+     ↓
+Reducer
+     ↓
+Store Updates State
+     ↓
+UI Re-renders
+
+Advantages of Redux
+Centralized state management.
+Predictable state updates.
+Easier debugging with Redux DevTools.
+Avoids prop drilling.
+Suitable for large and complex applications.
+
+Disadvantages of Redux
+Requires additional setup and boilerplate (though modern Redux Toolkit reduces this significantly).
+Can be unnecessary for small applications.
+Has a learning curve for beginners.
+
+Redux Architecture
+Redux consists of four main components:
+1. Store
+The Store is the central repository that holds the entire application's state.
+There is usually only one store in a Redux application.
+2. Action
+An Action is a plain JavaScript object that describes what happened.
+It must contain a type property and can optionally include additional data (payload).
+3. Reducer
+A Reducer is a pure function that receives the current state and an action.
+It returns a new state without modifying the existing state.
+4. Dispatch
+Dispatch is a method used to send an action to the Redux store.
+The store forwards the action to the reducer.
+
+Step-by-Step Data Flow
+--User performs an action
+   Example: Clicks the "Add to Cart" button.
+--Action is dispatched
+--Reducer processes the action
+--Store updates the state
+  Redux saves the new state returned by the reducer.
+--UI updates automatically 
+Components subscribed to the store receive the updated state and re-render
+
+
+slice is a feature-specific section of your Redux store that contains its own state, reducers, and actions.
