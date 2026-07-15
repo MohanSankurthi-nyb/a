@@ -1,0 +1,36 @@
+
+useReducer is a React Hook used to manage complex state in a component.
+
+It works like useState, but instead of updating state directly, you update state by sending actions
+to a reducer function.Both useState and useReducer are React Hooks for managing component state, 
+but they're designed for different levels of complexity.
+
+Feature	                        useState	            useReducer
+Best for                    	Simple state	        Complex state logic
+State updates	                Directly set new state	Dispatch actions to a reducer
+Readability	                     Easier for beginners	Better for larger applications
+Multiple related state values	Can become messy	    Keeps logic organized
+Debugging	                    Simpler	                More predictable and easier to trace
+
+Choose useState when:
+You have a few independent state values.
+Updates are straightforward.
+You're building small or medium-sized components.
+
+Example:
+Toggle a modal.
+Track an input value.
+Increment a counter.
+
+Choose useReducer when:
+State has multiple related fields.
+Updates depend on previous state or involve several steps.
+There are many different actions that can change the state.
+You want to keep state logic separate from the UI.
+
+Example:
+
+Shopping cart.
+Multi-step form.
+Todo app with add/edit/delete/complete actions.
+Complex dashboards.
