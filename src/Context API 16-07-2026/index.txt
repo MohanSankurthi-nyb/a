@@ -1,0 +1,49 @@
+The Context API is a feature in React that lets you share data across components without manually passing props
+ through every level (a problem often called prop drilling).
+ Core Concepts
+1. createContext()
+Creates a context object.
+2. Provider
+The Provider supplies data to all child components.
+3. useContext()
+Reads the current context value.
+
+When to Use Context API
+Use Context when many components need the same data, such as:
+User authentication
+Theme (Light/Dark mode)
+Language or locale
+User preferences
+Shopping cart
+Application settings
+
+Advantages
+Eliminates prop drilling.
+Makes shared data easily accessible.
+Cleaner component hierarchy.
+Built into React (no extra library needed).
+Works well with Hooks (useContext).
+
+| Feature           | Context API                      | useReducer                 | Redux                                 |
+| ----------------- | -------------------------------- | -------------------------- | ------------------------------------- |
+| **Purpose**       | Share data between components    | Manage complex state logic | Manage large global application state |
+| **Scope**         | Component tree                   | Single component           | Entire application                    |
+| **State Storage** | Inside Context Provider          | Inside component           | Central Redux Store                   |
+| **Update Method** | Change Provider value            | `dispatch(action)`         | `dispatch(action)`                    |
+| **Best For**      | Theme, user, language            | Complex local state        | Large apps with many shared states    |
+| **Boilerplate**   | Less                             | Less                       | More (but Redux Toolkit reduces it)   |
+| **Debugging**     | Basic                            | Basic                      | Excellent DevTools support            |
+| **Middleware**    | ❌ No                            | ❌ No                     | ✅ Yes                                 |
+| **Performance**   | Can cause unnecessary re-renders | Usually efficient          | Better control with selectors         |
+
+Context API
+Used to pass data to many components.
+Example: Dark mode, logged-in user.
+
+useReducer
+Used to manage complex state updates inside one component.
+Example: Form with many fields and actions.
+
+Redux
+Used to manage application-wide state.
+Example: Cart, user data, products, orders in a large app.
