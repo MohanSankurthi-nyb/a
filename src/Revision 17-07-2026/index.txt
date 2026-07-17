@@ -1,0 +1,114 @@
+| Feature        | Functional Components                | Class Components                          |
+| -------------- | ------------------------------------ | ----------------------------------------- |
+| Definition     | JavaScript functions that return JSX | ES6 classes that extend `React.Component` |
+| Syntax         | Simple and shorter                   | More code required                        |
+| State          | Uses Hooks (`useState`)              | Uses `this.state`                         |
+| Lifecycle      | Uses `useEffect()`                   | Uses lifecycle methods                    |
+| `this` keyword | Not required                         | Required                                  |
+| Performance    | Modern React standard                | Older approach                            |
+| Learning       | Easier                               | More complex                              |
+
+| Feature       | Props                            | State                         |
+| ------------- | -------------------------------- | ----------------------------- |
+| Meaning       | Data passed from parent to child | Data managed inside component |
+| Mutable       | No (Read-only)                   | Yes                           |
+| Controlled by | Parent component                 | Component itself              |
+| Used for      | Sharing data                     | Managing dynamic data         |
+| Update        | Parent changes props             | `setState()` / hooks          |
+
+| Feature          | Context API           | Redux                          | useReducer                 |
+| ---------------- | --------------------- | ------------------------------ | -------------------------- |
+| Purpose          | Share global data     | Manage large application state | Manage complex local state |
+| Setup            | Easy                  | More setup                     | Simple                     |
+| Best for         | Theme, auth, language | Large applications             | Component-level state      |
+| State management | Basic                 | Advanced                       | Local                      |
+| Middleware       | No                    | Yes                            | No                         |
+| DevTools         | Limited               | Excellent                      | No                         |
+
+| Feature         | Fetch API         | Axios                |
+| --------------- | ----------------- | -------------------- |
+| Built-in        | Yes (Browser API) | No (install package) |
+| JSON handling   | Manual            | Automatic            |
+| Error handling  | Manual            | Better               |
+| Request timeout | Not built-in      | Built-in             |
+| Interceptors    | No                | Yes                  |
+| Upload progress | Limited           | Supported            |
+
+React Basics
+Component: A reusable piece of UI in React.
+JSX: Syntax that allows writing HTML-like code inside JavaScript.
+Functional Component: A JavaScript function that returns JSX.
+Class Component: An ES6 class that extends React.Component.
+Virtual DOM: A lightweight copy of the real DOM used for faster updates.
+
+Props & State
+Props: Read-only data passed from parent component to child component.
+State: Data managed inside a component that can change over time.
+Props vs State: Props are external data; state is internal data.
+
+React Hooks
+useState: Hook used to manage component state.
+useEffect: Hook used for side effects like API calls and timers.
+useContext: Hook used to access Context API data.
+useReducer: Hook used for managing complex state logic.
+useRef: Hook used to store mutable values without re-rendering.
+
+State Management
+Context API: Built-in React feature for sharing global data.
+Redux: A library for managing global application state.
+Redux Toolkit: Modern and simplified way to write Redux code.
+useReducer vs Redux: useReducer handles local complex state; Redux handles global state.
+Provider: Component that provides global state to child components.
+Store: Central place where Redux state is stored.
+Reducer: Function that updates state based on actions.
+Action: Object that describes a state change.
+
+API Integration
+API: A way for applications to communicate with servers.
+Fetch API: Built-in browser method for making HTTP requests.
+Axios: External library for making API requests.
+GET: Retrieves data from a server.
+POST: Sends new data to a server.
+PUT: Updates complete existing data.
+PATCH: Updates partial existing data.
+DELETE: Removes data from a server.
+
+React Router
+React Router: Library used for navigation between React pages.
+Route: Defines a URL path and its component.
+Link: Used for navigation without page refresh.
+useNavigate: Hook used for programmatic navigation.
+useParams: Hook used to read URL parameters.
+
+Forms
+Controlled Component: Form input controlled by React state.
+Uncontrolled Component: Form input controlled by the DOM.
+Form Validation: Checking user input before submission.
+
+Folder Structure
+components: Stores reusable UI components.
+pages: Stores application screens.
+hooks: Stores custom React hooks.
+services: Stores API-related functions.
+context: Stores Context API files.
+redux: Stores Redux store and slices.
+utils: Stores reusable helper functions.
+assets: Stores images, icons, and static files.
+
+Common Issues
+State not updating: Use functional state updates when depending on previous state.
+Missing key warning: Add unique keys while rendering lists.
+Infinite useEffect loop: Check dependency array.
+Props drilling: Use Context API or Redux.
+Direct state mutation: Always update state using setter functions.
+API not loading: Check URL, network, and error handling.
+Component not rendering: Check export and import statements.
+CORS error: Server must allow requests from the frontend.
+Memory leak: Clean up subscriptions and timers in useEffect.
+
+Best Practices
+Component reusability: Create small reusable components.
+Single Responsibility: Each component should handle one task.
+Clean folder structure: Organize files based on features and purpose.
+Avoid unnecessary renders: Use memoization and proper state handling.
+Use Redux Toolkit: Prefer it over traditional Redux for new projects.
