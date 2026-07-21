@@ -1,0 +1,45 @@
+useEffect :
+useEffect is a React Hook used to perform side effects in functional components. 
+Side effects are operations that interact with the outside world or occur outside the normal rendering process,
+ such as fetching data, updating the document title, setting timers, or subscribing to events.
+
+Lifecycle Behavior of useEffect
+1. After Component Mounts
+When a component is rendered for the first time (mounted), useEffect executes after React has updated the UI. 
+This is commonly used for tasks that should happen only once when the component appears.
+
+2. After Component Updates
+When the component re-renders because its state or props change, useEffect may run again depending on its dependency array.
+This allows the effect to stay synchronized with the latest data.
+
+3. Before Re-running the Effect
+If the effect has a cleanup function, React executes that cleanup before running the effect again due to dependency 
+changes. This prevents duplicate subscriptions, timers, or other resources from accumulating.
+
+4. Before Component Unmounts
+When the component is removed from the UI (unmounted), React executes the cleanup function one final time.
+This is used to release resources such as event listeners, timers, or network subscriptions.
+
+Dependency Array Behavior
+No dependency array: The effect runs after every render.
+Empty dependency array ([]): The effect runs only once after the initial mount.
+Dependencies provided ([dependency]): The effect runs after the initial mount and whenever any specified dependency changes.
+Cleanup Function
+
+A cleanup function is an optional function returned from useEffect.
+Its purpose is to clean up resources created by the effect, such as:
+Removing event listeners
+Clearing timers or intervals
+Unsubscribing from services
+Closing connections
+
+React calls the cleanup function:
+
+Before the effect runs again (if dependencies have changed).
+When the component unmounts.
+
+useEffect runs after React finishes rendering and updating the UI.
+It is used to handle side effects that should occur outside the rendering process.
+Its execution depends on the dependency array.
+Cleanup functions help prevent memory leaks and keep the application efficient by releasing resource
+s when they are no longer needed.
