@@ -1,0 +1,42 @@
+A Higher-Order Component (HOC) is an advanced React pattern for reusing component logic.
+It is a function that takes a component as input and returns a new component with additional functionality.
+
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+WrappedComponent: The original component.
+EnhancedComponent: The new component with added behavior.
+
+Use of HOCs
+HOCs help avoid duplicating code when multiple components need the same functionality, such as:
+Authentication
+Logging
+Data fetching
+Permission checks
+Theme injection
+
+| Feature               | Higher-Order Components (HOCs)                                          | Hooks                                                                                   | Component Composition                                     |
+| --------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| **Definition**        | A function that takes a component and returns a new enhanced component. | Functions that let you use React state and lifecycle features in functional components. | Building complex UIs by combining smaller components.     |
+| **Introduced In**     | Before React 16.8                                                       | React 16.8                                                                              | Available since early React                               |
+| **Purpose**           | Reuse component logic by wrapping components.                           | Reuse stateful logic across components.                                                 | Reuse UI structure and behavior through nesting.          |
+| **Syntax**            | `withAuth(Component)`                                                   | `const data = useAuth()`                                                                | `<Layout><Header /><Content /></Layout>`                  |
+| **State Management**  | Indirectly through the wrapped component.                               | Directly using `useState`, `useReducer`, etc.                                           | Managed by parent or child components.                    |
+| **Logic Reusability** | Good                                                                    | Excellent                                                                               | Limited to UI composition.                                |
+| **Props Handling**    | Passes props through wrapped components.                                | No prop forwarding required.                                                            | Uses props between parent and child components.           |
+| **Performance**       | Can create extra component layers.                                      | No additional wrapper components.                                                       | Minimal overhead.                                         |
+| **Readability**       | Can become difficult with multiple nested HOCs ("wrapper hell").        | Cleaner and easier to understand.                                                       | Very readable for UI layouts.                             |
+| **Best Use Cases**    | Authentication, authorization, logging, analytics, legacy codebases.    | Data fetching, form handling, timers, reusable business logic.                          | Layouts, reusable UI sections, dashboards, cards, modals. |
+
+
+| Use Case                     | Description                                           | Example                                               |
+| ---------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| **Authentication**           | Restricts access to authenticated users.              | Protecting a Dashboard or Profile page.               |
+| **Authorization**            | Grants access based on user roles or permissions.     | Only admins can access the Admin Panel.               |
+| **Loading State**            | Displays a loading spinner until data is available.   | Showing a loader while fetching users from an API.    |
+| **Error Handling**           | Catches and displays errors gracefully.               | Showing an error page if a component fails to render. |
+| **Logging & Analytics**      | Logs component lifecycle events or user interactions. | Sending page-view events to Google Analytics.         |
+| **Data Fetching**            | Fetches data and injects it into components as props. | Loading product data for an e-commerce page.          |
+| **Theme Management**         | Injects theme-related properties.                     | Switching between light and dark modes.               |
+| **Feature Flags**            | Enables or disables features for specific users.      | Showing beta features only to selected users.         |
+| **Performance Optimization** | Prevents unnecessary renders or memoizes components.  | Optimizing frequently rendered dashboards.            |
+| **Permission Management**    | Controls visibility of buttons or actions.            | Displaying the Delete button only to managers.        |
+
