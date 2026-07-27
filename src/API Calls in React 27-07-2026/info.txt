@@ -1,0 +1,52 @@
+Purpose of React.memo()
+React.memo() is a performance optimization tool in React that prevents a component from re-rendering
+when its props have not changed.
+It works by memoizing (remembering) the previous rendered result of a component and comparing the new props
+with the old props. 
+If the props are the same, React skips the re-render.
+
+React.memo()
+In React, when a parent component re-renders, its child components normally re-render too — even 
+if the child received the same props.
+React.memo() prevents this by remembering the previous props and reusing the previous render result
+ when the props have not changed.
+
+Shallow Comparison of Props in React 
+Shallow comparison is the method React uses to compare the previous props of a component with its new props 
+at a single level.
+It is mainly used by React.memo() to decide whether a component needs to re-render.
+How it works
+When a parent component re-renders, React checks the child component's props:
+If the props are the same, React skips the child re-render.
+If the props are different, React re-renders the child component.
+
+Limitations of React.memo()
+React.memo() is a performance optimization feature that prevents unnecessary re-renders when a component receives
+the same props. However, it has some limitations.
+
+Works only with props:
+React.memo() only checks whether the component's props have changed. It does not prevent re-renders caused by the component's own state changes or context updates.
+Uses shallow comparison:
+React.memo() performs a shallow comparison of props. It checks the first level of values and does not deeply
+ compare objects, arrays, or nested data structures.
+Reference comparison for objects and functions:
+Objects, arrays, and functions are compared by their reference, not their content. If a new object or function is created during rendering, React may consider it a changed prop even if the data is identical.
+Not always faster:
+React.memo() adds an additional comparison step. For small or simple components, the cost of comparing 
+props may be greater than the cost of rendering the component.
+Does not stop all re-renders:
+A memoized component can still re-render when its internal state changes, when context values change, 
+or when its props actually change.
+
+Best Practices of Using React.memo()
+Use React.memo() for components that are expensive to render or appear frequently in the UI.
+Use it when a component receives the same props repeatedly and its parent component updates often.
+Keep props stable to get the best results. Avoid unnecessary creation of new objects, arrays, or functions
+ when passing them as props.
+Combine React.memo() with useMemo() and useCallback() when you need to maintain stable references for objects, 
+arrays, and functions.
+Do not apply React.memo() to every component by default. Use it only when there is a real performance benefit.
+Measure performance before and after using React.memo() to confirm that it improves rendering efficiency.
+
+->React.memo() is useful for reducing unnecessary re-renders, but it should be used selectively.
+It works best when components are expensive to render and receive stable props that do not change frequently.
