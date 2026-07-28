@@ -1,0 +1,45 @@
+A Fragment is a React feature that lets you group multiple elements without adding an extra HTML
+ element (like a <div>) to the DOM.
+
+| Feature                                 | React Fragment (`<>...</>` or `<Fragment>`)          | HTML Wrapper (`<div>`)                 |
+| --------------------------------------- | ---------------------------------------------------- | -------------------------------------- |
+| Adds an extra DOM element               | ❌ No                                                 | ✅ Yes                                  |
+| Can be styled with CSS                  | ❌ No                                                 | ✅ Yes                                  |
+| Can have attributes (`className`, `id`) | ❌ Shorthand cannot; `<Fragment>` only supports `key` | ✅ Yes                                  |
+| Keeps the DOM clean                     | ✅ Yes                                                | ❌ Adds an extra element                |
+| Used only for grouping                  | ✅ Yes                                                | ❌ Can be used for grouping and styling |
+
+Higher-Order Components (HOCs) in React
+
+A Higher-Order Component (HOC) is an advanced React pattern used to reuse component logic.
+A HOC is a function that takes a component as input and returns a new component with additional functionality.
+Syntax
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+WrappedComponent → The original component.
+EnhancedComponent → The new component with added features.
+
+## Real-World Use Cases of HOCs
+* Authentication and route protection
+* Loading state management
+* Error handling
+* Role-based access control
+* Permission management
+* Data fetching and API handling
+* Logging and analytics tracking
+* Theme and styling management
+* Feature access control
+* Reusable UI behavior
+* State and context sharing
+* Performance optimization
+* Subscription-based feature handling
+
+A Custom Hook is a reusable JavaScript function in React that starts with use and allows developers 
+to share stateful logic between multiple components using React Hooks.
+
+Why is it used?
+To reuse common logic across components.
+To reduce code duplication.
+To keep components clean and readable.
+To improve code maintainability.
+To separate business logic from UI.
+To make applications more modular and easier to test.
