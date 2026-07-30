@@ -1,0 +1,5 @@
+-A React Portal lets you show a component outside its parent in the webpage, even though it still belongs 
+to that parent in React.
+-React Portals allow you to render a component into a different part of the DOM while keeping it connected
+to the same React component tree. They are especially useful for UI elements like modals, tooltips, dropdowns
+, and notifications that need to appear above or outside their parent containers.
